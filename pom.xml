@@ -10,6 +10,8 @@
     <modules>
         <module>maven_manger_domain</module>
         <module>maven_manger_web</module>
+        <module>maven_manger_service</module>
+        <module>maven_manger_dao</module>
     </modules>
     <packaging>pom</packaging>
 
