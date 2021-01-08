@@ -63,7 +63,7 @@
 
         <mapper resource="com.henau.nileigee/mapper/busStopMapper.xml"/>
 
-        <mapper resource="com.henau.nileigee/mapper/busLineMapper.xml"
+        <mapper resource="com.henau.nileigee/mapper/busLineMapper.xml"/>
     </mappers>
 
 
