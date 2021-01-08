@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.henau.nileigee.dao.BusTeamMapper">
+    <select id="queryAllTeam" resultType="BusTeam">
+    select * from bus_team
+    </select>
+
+    <select id="queryTeamById" resultType="BusTeam" parameterType="java.lang.Integer">
+        select *from bus_team where bus_Id=#{busId}
+    </select>
+
+    <insert id="addBusTeam" parameterType="BusTeam" useGeneratedKeys="true" keyProperty="busId" keyColumn="bus_id">
+        insert into bus_team values (#{busId},#{carName},#{administratorId},#{comNumber},#{lineId})
+    </insert>
+
+    <delete id="deleteBusTeam" parameterType="java.lang.Integer">
+        delete from bus_team where bus_id=#{busId}
+    </delete>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(1) from bus_team
+    </select>
+</mapper>

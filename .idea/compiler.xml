@@ -7,8 +7,8 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="maven_manger_dao" />
-        <module name="maven_manger_domain" />
         <module name="maven_manger_service" />
+        <module name="maven_manger_domain" />
         <module name="maven_manger_web" />
       </profile>
     </annotationProcessing>

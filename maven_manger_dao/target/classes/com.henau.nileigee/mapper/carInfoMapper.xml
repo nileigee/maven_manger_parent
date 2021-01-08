@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.henau.nileigee.dao.CarInfoMapper">
+    <select id="queryAllCar" resultType="CarInfo">
+         select * from car_info
+    </select>
+    <select id="queryCarById" resultType="CarInfo" parameterType="java.lang.Integer">
+         select * from car_info where car_id=#{carId}
+    </select>
+    <insert id="addCarInfo" useGeneratedKeys="true" keyProperty="carId" keyColumn="car_id" parameterType="CarInfo">
+        insert into car_info values (#{carId},#{number},#{carColor},#{teamId},#{type},#{belongCompany},#{setnum},#{busMasterId},#{status})
+    </insert>
+    <delete id="deleteCar" parameterType="java.lang.Integer">
+        delete from car_info where car_Id=#{carId}
+    </delete>
+
+    <select id="queryCount" resultType="Integer">
+        select count(1) from  car_info
+    </select>
+</mapper>

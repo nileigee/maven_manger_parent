@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.henau.nileigee.dao.BusDriverMapper">
+    <select id="queryAllDriver" resultType="BusDriver">
+    select * from bus_driver
+    </select>
+
+    <select id="queryDriverById" resultType="BusDriver" parameterType="java.lang.Integer">
+        select *from bus_driver where dr_Id=#{drId}
+    </select>
+
+    <insert id="addBusDriver" parameterType="BusDriver" useGeneratedKeys="true" keyProperty="drId" keyColumn="dr_id">
+        insert into bus_driver values (#{drId},#{drName},#{drTel},#{status})
+    </insert>
+
+    <delete id="deleteBusDriver" parameterType="java.lang.Integer">
+        delete from bus_driver where dr_id=#{drId}
+    </delete>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(1) from bus_driver
+    </select>
+</mapper>

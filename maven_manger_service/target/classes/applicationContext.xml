@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <bean id="carInfoMapper" class="com.henau.nileigee.dao.impl.CarInfoMapperImpl"></bean>
+    <bean id="carInfoService" class="com.henau.nileigee.service.impl.CarInfoServiceImpl">
+        <property name="carInfoMapper" ref="carInfoMapper"/>
+    </bean>
+
+    <bean id="busDriverMapper" class="com.henau.nileigee.dao.impl.BusDriverMapperImpl"></bean>
+    <bean id="busDriverService" class="com.henau.nileigee.service.impl.BusDriverServiceImpl">
+        <property name="busDriverMapper" ref="busDriverMapper"/>
+    </bean>
+
+    <bean id="busTeamMapper" class="com.henau.nileigee.dao.impl.BusTeamMapperImpl"></bean>
+    <bean id="busTeamService" class="com.henau.nileigee.service.impl.BusTeamServiceImpl">
+        <property name="busTeamMapper" ref="busTeamMapper"/>
+    </bean>
+
+</beans>
