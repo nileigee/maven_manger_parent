@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.henau.nileigee.dao.BusLineMapper">
+    <select id="queryAllLine" resultType="BusLine">
+    select * from bus_line
+    </select>
+
+    <select id="queryLineById" resultType="BusLine" parameterType="java.lang.Integer">
+        select *from bus_line where line_id=#{lineId}
+    </select>
+
+    <insert id="addBusLine" parameterType="BusLine" useGeneratedKeys="true" keyProperty="lineId" keyColumn="line_id">
+        insert into bus_line values (#{lineId},#{lineName},#{comNumber},#{lineType},#{upLength},#{downLength},#{upStartTime},
+        #{upOverTime},#{downStartTime},#{downOverTime},#{status})
+    </insert>
+
+    <delete id="deleteBusLine" parameterType="java.lang.Integer">
+        delete from bus_line where line_id=#{lineId}
+    </delete>
+
+    <select id="queryCount" resultType="java.lang.Integer">
+        select count(1) from bus_line
+    </select>
+</mapper>

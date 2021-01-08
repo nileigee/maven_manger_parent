@@ -18,4 +18,8 @@
         <property name="busTeamMapper" ref="busTeamMapper"/>
     </bean>
 
+    <bean id="busStopMapper" class="com.henau.nileigee.dao.impl.BusStopMapperImpl"></bean>
+    <bean id="busStopService" class="com.henau.nileigee.service.impl.BusStopServiceImpl">
+        <property name="busStopMapper" ref="busStopMapper"/>
+    </bean>
 </beans>

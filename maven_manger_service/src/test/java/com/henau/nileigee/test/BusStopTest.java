@@ -52,18 +52,22 @@ public class BusStopTest {
         ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
         BusStopService busStopService = app.getBean(BusStopService.class);
         busStopService.addBusStop(busStop);
+        System.out.println(busStop);
     }
 
     @Test
     public void test4() throws IOException {
         ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
-
+        BusStopService busStopService = app.getBean(BusStopService.class);
+        busStopService.deleteBusStop(66);
 
     }
 
     @Test
     public void test5() throws IOException {
         ApplicationContext app=new ClassPathXmlApplicationContext("applicationContext.xml");
-
+        BusStopService busStopService = app.getBean(BusStopService.class);
+        int count = busStopService.queryCount();
+        System.out.println(count);
     }
 }

@@ -60,6 +60,8 @@
         <mapper resource="com.henau.nileigee/mapper/busDriverMapper.xml"/>
 
         <mapper resource="com.henau.nileigee/mapper/busTeamMapper.xml"/>
+
+        <mapper resource="com.henau.nileigee/mapper/busStopMapper.xml"/>
     </mappers>
 
 

@@ -22,4 +22,9 @@
     <bean id="busStopService" class="com.henau.nileigee.service.impl.BusStopServiceImpl">
         <property name="busStopMapper" ref="busStopMapper"/>
     </bean>
+
+    <bean id="buLineMapper" class="com.henau.nileigee.dao.impl.BusLineMapperImpl"></bean>
+    <bean id="busLineService" class="com.henau.nileigee.service.impl.BusLineServiceImpl">
+        <property name="busLineMapper" ref="buLineMapper"/>
+    </bean>
 </beans>
